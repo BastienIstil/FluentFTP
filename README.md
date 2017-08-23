@@ -55,6 +55,8 @@ FluentFTP works on .NET and .NET Standard/.NET Core.
 |---------------		|-----------		|---------------------------	|
 | **.NET 2.0**      	| net20     		| FluentFTP_NET_VS2012.sln  	|
 | **.NET 3.5**      	| net35     		| FluentFTP_NET_VS2012.sln  	|
+| **Unity .NET 3.5 Full base**      	| net35     		| FluentFTP_NET_VS2012.sln  	|
+| **Unity .NET 3.5 Subset base**      	| net35     		| FluentFTP_NET_VS2012.sln  	|
 | **.NET 4.0**      	| net40     		| FluentFTP_NET_VS2012.sln  	|
 | **.NET 4.5**      	| net45     		| FluentFTP_NET_VS2012.sln  	|
 | **.NET Standard 1.4** | netstandard1.4	| FluentFTP_Core14_VS2017.sln 	|
