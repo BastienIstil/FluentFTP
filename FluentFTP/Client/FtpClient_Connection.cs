@@ -13,7 +13,7 @@ using System.Security.Authentication;
 using System.Net;
 using FluentFTP.Proxy;
 #if !CORE
-using System.Web;
+//using System.Web;
 #endif
 
 #if (CORE || NETFX)
@@ -1456,11 +1456,14 @@ namespace FluentFTP {
 			return path;
 		}
 
-		private static string DecodeUrl(string url) {
+		private static string DecodeUrl(string url)
+        {
 #if CORE
-			return WebUtility.UrlDecode(url);
+            return WebUtility.UrlDecode(url);
+#elif UNITY_SUBSET
+            return Uri.UnescapeDataString(url);
 #else
-			return HttpUtility.UrlDecode(url);
+            return HttpUtility.UrlDecode(url);
 #endif
 		}
 

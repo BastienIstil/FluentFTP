@@ -13,7 +13,7 @@ using System.Security.Authentication;
 using System.Net;
 using FluentFTP.Proxy;
 #if !CORE
-using System.Web;
+//using System.Web;
 #endif
 
 #if (CORE || NETFX)
@@ -73,7 +73,7 @@ namespace FluentFTP {
 	/// listing from the server.
 	/// <code source="..\Examples\GetListing.cs" lang="cs" />
 	/// </example>
-	public partial class FtpClient : IFtpClient, IDisposable {
+	public partial class FtpClient : IDisposable {
 
 		#region Delete File
 

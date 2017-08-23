@@ -78,23 +78,21 @@ namespace FluentFTP {
 						break;
 #if !NET2
 					case FtpHashAlgorithm.SHA256:
-#if CORE
+#if CORE || UNITY_SUBSET
 						hashAlg = SHA256.Create();
 #else
-						hashAlg = new SHA256CryptoServiceProvider();
+                        hashAlg = new SHA256CryptoServiceProvider();
 #endif
-						break;
+                        break;
 					case FtpHashAlgorithm.SHA512:
-#if CORE
-						hashAlg = SHA512.Create();
-#else
-						hashAlg = new SHA512CryptoServiceProvider();
+#if CORE || UNITY_SUBSET
+                        hashAlg = SHA512.Create();
 #endif
 						break;
 #endif
 					case FtpHashAlgorithm.MD5:
-#if CORE
-						hashAlg = MD5.Create();
+#if CORE || UNITY_SUBSET
+                        hashAlg = MD5.Create();
 #else
 						hashAlg = new MD5CryptoServiceProvider();
 #endif
